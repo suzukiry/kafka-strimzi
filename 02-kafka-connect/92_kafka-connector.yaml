@@ -1,0 +1,12 @@
+apiVersion: kafka.strimzi.io/v1alpha1
+kind: KafkaConnector
+metadata:
+  name: my-source-connector
+  labels:
+    strimzi.io/cluster: my-connect
+spec:
+  class: org.apache.kafka.connect.file.FileStreamSourceConnector
+  tasksMax: 3
+  config:
+    file: "/tmp/01_deploy_and_connect/uber.csv"
+    topic: my-topic-2
