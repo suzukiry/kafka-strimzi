@@ -4,6 +4,7 @@ metadata:
   labels:
     app: kafka-consumer
   name: kafka-consumer
+  namespace: my-pro-con-project
 spec:
   replicas: 1
   selector:
