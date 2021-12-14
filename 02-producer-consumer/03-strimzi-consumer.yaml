@@ -27,7 +27,7 @@ spec:
             memory: 1Gi
         env:
           - name: BOOTSTRAP_SERVERS
-            value: my-cluster-kafka-bootstrap:9092
+            value: my-cluster-kafka-bootstrap.my-kafka-project.svc.cluster.local:9092
           - name: TOPIC
             value: my-topic
           - name: GROUP_ID
