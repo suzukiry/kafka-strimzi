@@ -1,0 +1,12 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: Kafka
+metadata:
+  name: my-cluster
+  namespace: my-kafka-project
+spec:
+  kafka:
+    config:
+      inter.broker.protocol.version: "2.9"
+      log.message.format.version: "2.9"
+    version: 2.9.0
+

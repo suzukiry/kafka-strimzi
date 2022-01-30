@@ -1,11 +1,14 @@
-apiVersion: kafka.strimzi.io/v1alpha1
+apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaConnect
 metadata:
-  name: my-connect
-  annotations:
-    strimzi.io/use-connector-resources: "true"
+ name: my-connect-cluster
+ namespace: my-kafka-project
+ annotations:
+   strimzi.io/use-connector-resources: "true"
 
 spec:
+  bootstrapServers: my-cluster-kafka-bootstrap:9092
+  version: 2.8.0
   replicas: 1
   resources:
     requests:
@@ -20,7 +23,6 @@ spec:
   livenessProbe:
     initialDelaySeconds: 120
     timeoutSeconds: 5
-  bootstrapServers: my-cluster-kafka-bootstrap:9092
   config:
     key.converter: org.apache.kafka.connect.storage.StringConverter
     value.converter: org.apache.kafka.connect.storage.StringConverter
