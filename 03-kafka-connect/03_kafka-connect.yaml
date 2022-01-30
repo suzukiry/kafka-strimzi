@@ -7,8 +7,8 @@ metadata:
    strimzi.io/use-connector-resources: "true"
 
 spec:
-  bootstrapServers: my-cluster-kafka-bootstrap:9092
-  version: 2.8.0
+  bootstrapServers: my-cluster3-kafka-bootstrap:9092
+  version: 3.0.0
   replicas: 1
   resources:
     requests:

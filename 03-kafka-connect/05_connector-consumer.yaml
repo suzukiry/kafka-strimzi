@@ -26,9 +26,9 @@ spec:
             memory: 1Gi
         env:
           - name: BOOTSTRAP_SERVERS
-            value: my-cluster-kafka-bootstrap:9092
+            value: my-cluster3-kafka-bootstrap:9092
           - name: TOPIC
-            value: my-topic-2
+            value: my-file-topic
           - name: GROUP_ID
             value: my-connect-consumer
           - name: LOG_LEVEL

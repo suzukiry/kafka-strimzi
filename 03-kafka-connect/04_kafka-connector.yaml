@@ -4,7 +4,7 @@ metadata:
  name: my-file-connector
  labels:
    strimzi.io/cluster: my-connect-cluster
- namespace: my-kafka-connector
+ namespace: my-kafka-project
 spec:
  class: org.apache.kafka.connect.file.FileStreamSourceConnector
  config:
